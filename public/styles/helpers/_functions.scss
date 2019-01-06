@@ -1,0 +1,8 @@
+@function darken($color, $percent){
+  @return rgb($color, $percent);
+}
+
+@function lighten($color, $percent){
+  $result: 100 - $percent;
+  @return rgba($color, $result / 100);
+}

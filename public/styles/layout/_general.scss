@@ -1,0 +1,13 @@
+// Headers
+body{
+  @include scrollbar($brand-main, lighten($brand-main, 20), 10px);
+  @include headers(55px, 5px);
+
+  a{
+    text-decoration: none;
+  }
+  
+  p{
+    font-size: 14px;
+  }
+}

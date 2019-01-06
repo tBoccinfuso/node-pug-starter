@@ -1,0 +1,23 @@
+include ../mixins/collection
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    //- Title is passwed via the controller
+    title= `${title} | Template Site`
+    //- Main.css is compiled from all the SCSS files
+    link(rel='stylesheet', href='/styles/main.css')
+    //- block styles can be extended in a page to page related styles
+    block styles
+  body
+    //- _nav.pug
+    include _nav
+
+    //- pages will extend this layout and go in block content
+    block content
+
+    //- _footer.pug
+    include _footer

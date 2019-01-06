@@ -1,0 +1,24 @@
+header.header {
+  .nav-list {
+    @include flex-row();
+    padding: none;
+    list-style: none;
+
+    .nav-item {
+      a {
+        color: $brand-main;
+        transition: 0.5s;
+
+        &.active {
+          color: $brand-secondary;
+          transition: 0.5s;
+          &:hover{
+            color: lighten($brand-secondary, 20);
+          }
+        }
+
+      }
+    }
+  }
+
+}

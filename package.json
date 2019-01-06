@@ -1,0 +1,26 @@
+{
+  "name": "node-pug-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "concurrently \" npm run watch-css \" nodemon app.js",
+    "start-server": "node app.js",
+    "build-css": "node-sass --include-path scss public/styles/main.scss public/styles/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9"
+  }
+}
